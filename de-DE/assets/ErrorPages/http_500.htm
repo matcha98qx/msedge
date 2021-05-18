@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>HTTP 500-Fehler</title>
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="HTTP500">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="http500_header1">HTTP 500-Fehler</h1>
+                        <h1 id="http500_header2">Seltsam, die Website kann diese Seite nicht anzeigen.</h1>
+                        <p id="http500_body1">Die Website wird u. U. gewartet oder weist einen Programmierfehler auf.</p>
+                        <p id="http500_body2">Probieren Sie Folgendes</p>
+                        <ul>
+                            <li><a href="#" onclick="window.history.back(); return false;"><id id="http500_goback">Kehren Sie zur letzten Seite zurück.</id></a></li>
+                            <li><id id="http500_body3">Versuchen Sie, Kontakt mit dem Eigentümer der Website aufzunehmen.</id></li>
+                           <li><a href="#" onclick="clickSendFeedback()" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">Dieses Problem melden</id></a></li>
+                        </ul>
+                        <br>
+                        <a href="#" onclick="clickPrivacyStatement()" id="http500_PrivacyStatementLink"><id id="http500_privacystatement"><small>Datenschutzbestimmungen</small></id></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>PDF-Fehler</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="HTTP500">
+            <table>
+                <tr>
+                    <td><span id="icon">&#xE946;</span> </td>
+                    <td>
+                        <h1 id="pdfmf_header">Da fehlt etwas.</h1>
+                        <p id="pdfmf_body">Zum Anzeigen einer PDF-Datei benötigen Sie Medienfunktionen, die zurzeit nicht verfügbar sind. Um diese PDF-Datei anzuzeigen, können Sie das Media Feature Pack installieren.</p>
+                        <ul>
+                            <li><a href="" onclick="window.history.back()"><id id="pdfmf_goback">Kehren Sie zur letzten Seite zurück.</id></a></li>
+                            <li><a href="#" onclick="clickSendFeedback()" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">Dieses Problem melden</id></a></li>
+                        </ul>
+                        <br>
+                        <a href="#" onclick="clickPrivacyStatement()" id="pdfmf_PrivacyStatementLink"><id id="pdfmf_privacystatement"><small>Datenschutzbestimmungen</small></id></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

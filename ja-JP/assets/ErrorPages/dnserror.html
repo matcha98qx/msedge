@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' ms-appx-web:">
+    <title>このページを表示できません</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script src="ms-appx-web:///Assets/ErrorPages/dnserror.js" language="javascript" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="PageUnavailable">
+            <div class="msgBlock">
+                <div class="msgBody">
+                    <table role="presentation">
+                        <tr>
+                            <td aria-hidden="true">
+                                <span id="icon">&#x0EB7D;</span>
+                            </td>
+                            <td>
+                                <h1 id="dnserror_unavailable_header">このページを表示できません</h1>
+                                <p id="dnserror_unavailable_body">対処方法</p>
+                                <ul>
+                                    <li id="PageUnavailableApplicationGuardWorkRelatedSuggestion">これが作業関連のサイトの場合は、Application Guard の外部の新しい Microsoft Edge ウィンドウで開く</li>
+                                    <li><id id="dnserror_unavailable_righturl">Web アドレスが正しいことを確認してください: </id> <span class="webpageURL"></span></li>
+                                    <li><a href="#" id="dnsErrorSearchLink"><id id="dnserror_unavailable_search">Bing で "<span class="webpageURL"></span>" を検索してください</id></a></li>
+                                    <li><a href="#" id="dnsErrorRefreshLink"><id id="dnserror_unavailable_refresh">ページを最新の情報に更新</id></a></li>
+                                </ul>
+                                <div id="moreInfoDropdown">
+                                    <a href="#" id="moreInformationDropdownLink" style="text-decoration: none;">
+                                        <span id="moreInformationDropdownSpan"></span>
+                                    </a>
+                                </div>
+                                <div id="infoBlockID">
+                                    <p id="subError"></p>
+                                    <p id="ErrorCode"></p>
+                                </div>
+                                <ul>
+                                    <li><a href="#" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">この問題を報告する</id></a></li>
+                                </ul>
+                                <br>
+                                <a href="#" id="dnsPrivacyStatementLink"><id id="dnserror_unavailable_privacystatement"><small>プライバシーに関する声明</small></id></a>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="NotConnected">
+            <table role="presentation">
+                <tr>
+                    <td aria-hidden="true">
+                        <span id="icon">&#x0EB7C;</span>
+                    </td>
+                    <td>
+                        <h1 id="dnserror_offline_header">ネットワークに接続していません</h1>
+                        <p id="dnserror_offline_body1">Web にアクセスできません。 </p>
+                        <p id="dnserror_offline_body2">オンラインにする方法</p>
+                        <ul>
+                            <li class="noCables"><id id="dnserror_offline_checkcables">ネットワーク ケーブルが接続されていることを確かめてください。</id></li>
+                            <li><id id="dnserror_offline_airplanemode">機内モードになっていないことを確かめてください。</id></li>
+                            <li><id id="dnserror_offline_wirelessswitch">ワイヤレス スイッチがオンになっていることを確かめてください。</id></li>
+                            <li><id id="dnserror_offline_restartrouter">ルーターを再起動してください。</id></li>
+                        </ul>
+                        <br />
+                        <button class="pushbutton" id="LaunchMSSettingsNetworkStatus" type="submit"><id id="dnserror_offline_networksettings">修正方法</id></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="locResources">
+            <p id="L_Unavailable_Title_TEXT">このページを表示できません</p>
+            <p id="L_Disconnected_Title_TEXT">ネットワークに接続していません</p>
+            <p id="L_RESOURCE_NOT_FOUND_TEXT">この Web サイトは見つかりませんでした。</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAECONNRESET_TEXT">接続が DNS サーバーで拒否されました。</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAETIMEDOUT_TEXT">DNS サーバーへの接続がタイム アウトになりました。</p>
+            <p id="L_RESOURCE_NOT_FOUND_ERROR_SUCCESS_TEXT">一時的な DNS エラーが発生しました。ページを更新してください。</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAHOST_NOT_FOUND_TEXT">DNS 名が存在しません。</p>
+            <p id="L_RESOURCE_NOT_FOUND_ERROR_OTHER_TEXT">DNS サーバーに問題がある可能性があります。</p>
+            <p id="L_DOWNLOAD_FAILURE_TEXT">Web サイトへの接続がリセットされました。</p>
+            <p id="L_REDIRECT_FAILED_TEXT">リダイレクトが多すぎました。</p>
+            <p id="L_CONNECTION_TIMEOUT_TEXT">この Web サイトへの接続に時間がかかりすぎました。</p>
+            <p id="L_DATA_NOT_AVAILABLE_TEXT">Web サイトに接続しましたが、データを受信できませんでした。</p>
+            <p id="L_ERROR_CODE_TEXT">エラー コード: </p>
+            <p id="L_MOREINFO_TEXT">詳細</p>
+        </div>
+    </div>
+</body>
+</html> 

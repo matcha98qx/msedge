@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>Keine sichere Verbindung mit dieser Seite möglich</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        var L_NONDEFAULT_SETTINGS_TEXT = "Ihre TLS-Sicherheitseinstellungen weisen keine Standardwerte auf, was ebenfalls diesen Fehler verursachen könnte.";
+
+        function checkTLSError() {
+            var protocolSettings = Number(findValue("SecureProtocol="));
+            var defaultSettings = 2688; // 0xa80 - TLS 1.0, TLS 1.1, TLS 1.2
+            if (protocolSettings !== defaultSettings) {
+                document.getElementById("subError").innerHTML += "<br><br>" + L_NONDEFAULT_SETTINGS_TEXT;
+            }
+        }
+    </script>
+</head>
+
+<body onload="checkTLSError()">
+    <div id="Wrapper">
+        <div id="tlserror">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="tlserror_header">Keine sichere Verbindung mit dieser Seite möglich</h1>
+                        <p class="BodyTextBlockStyle" id="subError">Dies liegt möglicherweise daran, dass die Website veraltete oder unsichere TLS-Sicherheitseinstellungen verwendet. Wenn das Problem wiederholt auftritt, wenden Sie sich an den Besitzer der Website.</p>
+                        <p id="tlserror_body">Probieren Sie Folgendes:</p>
+                        <ul>
+                            <li><a href="#" onclick="window.history.back(); return false;"><id id="tlserror_goback">Zurück zur letzten Seite</id></a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="ms-appx-web:///Assets/ErrorPages/PhishSiteStyles.css">
+    <link rel="stylesheet" type="text/css" href="PhishSiteStyles.css">
+    <title>Gemeldete unsichere Website: Navigation gesperrt</title>
+
+    <script language="javascript" type="text/javascript">
+        // Localized strings used by phishsite.js.
+        var L_PhishingThreat_TEXT = "Bedrohung durch Phishing: Bei diese Site handelt es sich um eine Phishingwebsite, die eine vertrauenswürdige Website imitiert. Hierdurch sollen Sie dazu gebracht werden, persönliche oder Finanzinformationen preiszugeben.";
+        var L_MalwareThreat_TEXT = "Bedrohung durch Malware: Diese Site enthält Links zu Viren oder anderen Softwareprogrammen, durch die persönliche Informationen, die auf Ihrem Computer gespeichert sind oder die Sie eingeben, für unbefugte Personen offengelegt werden können.";
+
+        var L_TopFrameUnsafe_TEXT = "Diese Website wurde als unsicher gemeldet.";
+        var L_ContentUnsafe_TEXT = "Inhalt auf dieser Website wurde als unsicher gemeldet.";
+        var L_Content_TEXT = "Gehostet von:  ";
+
+        // Localized strings used by httpErrorPagesScripts.js.
+        var L_MOREINFO_TEXT = "Weitere Informationen";
+    </script>
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript">
+    </script>
+    <script src="ms-appx-web:///Assets/ErrorPages/httpErrorPagesScripts.js" language="javascript" type="text/javascript">
+    </script>
+
+    <script src="ms-appx-web:///Assets/ErrorPages/phishsite.js" language="javascript" type="text/javascript">
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        function expandCollapsePhish(elem, changeImage) {
+            if (document.getElementById) {
+                ecBlock = document.getElementById(elem);
+                elemImage = document.getElementById(elem + "Span");
+
+                if (ecBlock != undefined && ecBlock != null) {
+                    var displayValue = getDisplayValue(ecBlock);
+                    if (displayValue == "none" || displayValue == null || displayValue == "") {
+                        //shows the info.
+                        ecBlock.style.display = "block";
+                        if (changeImage) {
+                            //Just got in expanded mode. Thus, change image to "collapse"
+                            elemImage.innerHTML = "&#x0e70e;";
+                        }
+                    }
+                    else if (displayValue == "block") {
+                        //hide info
+                        ecBlock.style.display = "none";
+                        if (changeImage) {
+                            //Just got in collapsed mode. Thus, change image to "expand"
+                            elemImage.innerHTML = "&#x0e70d;";
+                        }
+                    }
+                    else {
+                        //catch any weird circumstances.
+                        ecBlock.style.display = "block";
+                        if (changeImage) {
+                            elemImage.innerHTML = "&#x0e70e;";
+                        }
+                    }
+                }//end check ecBlock
+            }//end getElemById
+        }//end expandCollapse
+    </script>
+</head>
+
+<body onload="BodyLoad(); javascript: expandCollapsePhish('infoBlockID', true);" class="red">
+    <div id="Wrapper">
+        <div class="msgBlock red">
+            <div class="msgIcon white icon">&#x0e7ba;</div>
+            <div class="msgBody white">
+                <h2 id="mainTitle" class="white"></h2>
+                <h3 id="contentlocations" name="contentlocations"></h3>
+                <h3 id="hostsite" name="hostsite"></h3>
+                <p><id id="recommendation">Es wird empfohlen, dass Sie nicht zu dieser Website wechseln. Diese Website wurde Microsoft als unsichere Website gemeldet, die möglicherweise persönliche oder Finanzinformationen offenlegt.</id></p>
+                <button class="white-pushbutton" style="margin: 24px 0 24px 0" type="submit" onclick="javascript: window.location='about:home'; return false;"><id id="goToHomePage">Stattdessen zur eigenen Startseite wechseln</id></button>
+                <div>
+                    <a href="#" id="moreInformationDropdownLink" style="text-decoration: none;" onclick="javascript: expandCollapsePhish('infoBlockID', true); return false;">
+                        <span class="white" style="font-size: 13px; font-family: 'Segoe UI'" id="moreInformationDropdownSpan"></span>
+                    </a>
+                    <a href="#" style="text-decoration: none;" onclick="javascript: expandCollapsePhish('infoBlockID', true); return false;">
+                        <span>&nbsp;</span><span class="white icon" style="width: 12px; font-size: 12px" id="infoBlockIDSpan">&#x0e70d;</span>
+                    </a>
+                </div>
+                <div style="font-size: 12px; font-family: 'Segoe UI'; margin: 14px 12px 0 12px" id="infoBlockID">
+                    <div style="margin: 0 0 24px 0">
+                        <id id="threatsIntro">Für diese Website wurden die folgenden Bedrohungen gemeldet:</id>
+                        <ul id="threatsList">
+                            <li id="PhishingThreat" class="bullet-li" name="PhishingThreat" style="display:none"></li>
+                            <li id="MalwareThreat" class="bullet-li" name="MalwareThreat" style="display:none"></li>
+                        </ul>
+                    </div>
+                    <div><a href='javascript:makeReportURL();' class="white">Report that this site does not contain threats</a></div>
+                    <div id="DoOverride"><a href='' class="white" name="overrideLink" id="overrideLink">Ignorieren und fortfahren (nicht empfohlen)</a></div>
+                </div>
+                <div id="branding" style="font-size: 12px; font-family: 'Segoe UI'; text-align: right; margin-top: 12px"><id id="SmartScreenOutro">Windows Defender SmartScreen</id></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

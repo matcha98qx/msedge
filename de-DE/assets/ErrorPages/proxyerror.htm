@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>Proxyserverfehler</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        "use strict";
+        window.onload = function () {
+            // The Settings app cannot be launched from the isolated container.
+            var buttonLaunchMSSettingsNetworkProxy = document.getElementById("LaunchMSSettingsNetworkProxy");
+            buttonLaunchMSSettingsNetworkProxy.style.display = isInApplicationGuard() ? "none" : null;
+        };
+    </script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="proxyerror">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="proxyerror_header">Mit dem Proxyserver kann keine Verbindung hergestellt werden.</h1>
+                        <p id="proxyerror_body">Probieren Sie Folgendes</p>
+                        <ul>
+                            <li><id id="proxyerror_firewall">Vergewissern Sie sich, dass der Webzugriff nicht durch Ihre Firewalleinstellungen blockiert wird.</id></li>
+                            <li><id id="proxyerror_administrator">Bitten Sie Ihren Systemadministrator um Hilfe.</id></li>
+                        </ul>
+                        <br />
+                        <button class="pushbutton" id="LaunchMSSettingsNetworkProxy" type="submit" onclick="window.location='ms-settings:network-proxy'"><id id="proxyerror_proxysettings">Zu Proxyeinstellungen wechseln</id></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

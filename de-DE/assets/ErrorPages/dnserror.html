@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' ms-appx-web:">
+    <title>Kein Zugriff auf Seite</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script src="ms-appx-web:///Assets/ErrorPages/dnserror.js" language="javascript" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="PageUnavailable">
+            <div class="msgBlock">
+                <div class="msgBody">
+                    <table role="presentation">
+                        <tr>
+                            <td aria-hidden="true">
+                                <span id="icon">&#x0EB7D;</span>
+                            </td>
+                            <td>
+                                <h1 id="dnserror_unavailable_header">Diese Seite ist nicht erreichbar.</h1>
+                                <p id="dnserror_unavailable_body">Probieren Sie Folgendes</p>
+                                <ul>
+                                    <li id="PageUnavailableApplicationGuardWorkRelatedSuggestion">Wenn dies eine geschäftliche Website ist, öffnen Sie sie in einem neuen Microsoft Edge-Fenster außerhalb von Application Guard.</li>
+                                    <li><id id="dnserror_unavailable_righturl">Stellen Sie sicher, dass Sie die richtige Webadresse verwenden: </id> <span class="webpageURL"></span></li>
+                                    <li><a href="#" id="dnsErrorSearchLink"><id id="dnserror_unavailable_search">Auf Bing nach „<span class="webpageURL"></span>“ suchen</id></a></li>
+                                    <li><a href="#" id="dnsErrorRefreshLink"><id id="dnserror_unavailable_refresh">Seite aktualisieren</id></a></li>
+                                </ul>
+                                <div id="moreInfoDropdown">
+                                    <a href="Titelnummer" id="moreInformationDropdownLink" style="text-decoration: none;">
+                                        <span id="moreInformationDropdownSpan"></span>
+                                    </a>
+                                </div>
+                                <div id="infoBlockID">
+                                    <p id="subError"></p>
+                                    <p id="ErrorCode"></p>
+                                </div>
+                                <ul>
+                                    <li><a href="#" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">Dieses Problem melden</id></a></li>
+                                </ul>
+                                <br>
+                                <a href="#" id="dnsPrivacyStatementLink"><id id="dnserror_unavailable_privacystatement"><small>Datenschutzbestimmungen</small></id></a>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="NotConnected">
+            <table role="presentation">
+                <tr>
+                    <td aria-hidden="true">
+                        <span id="icon">&#x0EB7C;</span>
+                    </td>
+                    <td>
+                        <h1 id="dnserror_offline_header">Sie sind nicht verbunden.</h1>
+                        <p id="dnserror_offline_body1">Wir möchten Sie aber gerne dabei haben. </p>
+                        <p id="dnserror_offline_body2">Wir helfen Ihnen dabei, wieder online zu gehen.</p>
+                        <ul>
+                            <li class="noCables"><id id="dnserror_offline_checkcables">Überprüfen Sie, ob die Netzwerkkabel angeschlossen sind.</id></li>
+                            <li><id id="dnserror_offline_airplanemode">Stellen Sie sicher, dass Sie sich nicht im Flugzeugmodus befinden.</id></li>
+                            <li><id id="dnserror_offline_wirelessswitch">Überprüfen Sie, ob Ihr Drahtlosswitch eingeschaltet ist.</id></li>
+                            <li><id id="dnserror_offline_restartrouter">Starten Sie Ihren Router neu.</id></li>
+                        </ul>
+                        <br />
+                        <button class="pushbutton" id="LaunchMSSettingsNetworkStatus" type="submit"><id id="dnserror_offline_networksettings">Problem beheben</id></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="locResources">
+            <p id="L_Unavailable_Title_TEXT">Kein Zugriff auf Seite</p>
+            <p id="L_Disconnected_Title_TEXT">Sie sind nicht verbunden.</p>
+            <p id="L_RESOURCE_NOT_FOUND_TEXT">Diese Website wurde nicht gefunden.</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAECONNRESET_TEXT">Der DNS-Server hat die Verbindung abgelehnt.</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAETIMEDOUT_TEXT">Bei der Verbindung mit dem DNS-Server ist eine Zeitüberschreitung aufgetreten.</p>
+            <p id="L_RESOURCE_NOT_FOUND_ERROR_SUCCESS_TEXT">Vorübergehender DNS-Fehler. Versuchen Sie, die Seite zu aktualisieren.</p>
+            <p id="L_RESOURCE_NOT_FOUND_WSAHOST_NOT_FOUND_TEXT">Der DNS-Name ist nicht vorhanden.</p>
+            <p id="L_RESOURCE_NOT_FOUND_ERROR_OTHER_TEXT">Beim DNS-Server sind unter Umständen Probleme aufgetreten.</p>
+            <p id="L_DOWNLOAD_FAILURE_TEXT">Die Verbindung mit der Website wurde zurückgesetzt.</p>
+            <p id="L_REDIRECT_FAILED_TEXT">Es gab zu viele Umleitungen.</p>
+            <p id="L_CONNECTION_TIMEOUT_TEXT">Es hat zu lange gedauert, eine Verbindung mit dieser Website herzustellen.</p>
+            <p id="L_DATA_NOT_AVAILABLE_TEXT">Die Verbindung mit der Website wurde hergestellt, aber es wurden keine Daten von ihr empfangen.</p>
+            <p id="L_ERROR_CODE_TEXT">Fehlercode: </p>
+            <p id="L_MOREINFO_TEXT">Details</p>
+        </div>
+    </div>
+</body>
+</html> 

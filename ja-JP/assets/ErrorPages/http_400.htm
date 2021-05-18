@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>HTTP 400 エラー</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="HTTP400">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="http400_header1">HTTP 400 エラー</h1>
+                        <h1 id="http400_header2">このリンクに問題があります (リンクが壊れている可能性があります)</h1>
+                        <p id="http400_body">対処方法</p>
+                        <ul>
+                            <li><id id="http400_retypeURL">Web アドレスの入力をやり直す</id></li>
+                            <li><a href="#" onclick="window.history.back(); return false;"><id id="http400_goback">直前のページに戻る</id></a></li>
+                            <li><a href="#" onclick="window.location = 'https://www.bing.com/search?q=' + getUrl(); return false;"><id id="http400_search">ページを検索する</id></a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

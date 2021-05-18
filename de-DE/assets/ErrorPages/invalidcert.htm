@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>Zertifikatfehler: Navigation gesperrt</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        var L_CertUnknownCA_TEXT = "Dem Sicherheitszertifikat dieser Website wird von Ihrem PC nicht vertraut.";
+        var L_CertExpired_TEXT = "Das Sicherheitszertifikat der Website ist abgelaufen oder noch nicht gültig.";
+        var L_CertCNMismatch_TEXT = "Der Hostname im Sicherheitszertifikat der Website stimmt nicht mit dem Namen der Website überein, die Sie besuchen möchten.";
+        var L_CertRevoked_TEXT = "Das Sicherheitszertifikat dieser Website wurde gesperrt, sodass Sie sie derzeit nicht besuchen können.";
+        var L_CertSigFailed_TEXT = "Das Sicherheitszertifikat der Website ist nicht sicher.";
+        var L_CertWeakSignature_TEXT = "Das Sicherheitszertifikat der Website besitzt eine schwache Signatur und ist nicht sicher.";
+
+        var L_ERROR_CODE_TEXT = "Fehlercode: ";
+
+        var L_MOREINFO_TEXT = "Details";
+
+        window.onload = function () {
+            getCertErrorInfo();
+            initMoreInfo('infoBlockID', L_MOREINFO_TEXT);
+            setGoHomeTarget();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="invalidcert">
+            <div class="msgBlock">
+                <div class="msgBody">
+                    <table role="presentation">
+                        <tr>
+                            <td aria-hidden="true">
+                                <span id="erroricon">&#xE7BA;</span>
+                            </td>
+                            <td>
+                                <h2 class="red" id="invalidcert_header">Diese Website ist nicht sicher.</h2>
+                                <br />
+                                <p id="invalidcert_body1">Dieses Problem deutet eventuell auf den Versuch hin, Sie zu täuschen bzw. Daten, die Sie an den Server gesendet haben, abzufangen. Die Website sollte sofort geschlossen werden.</p>
+                                <br />
+                                <table role="presentation">
+                                    <tr>
+                                        <td aria-hidden="true"><span id="smallgoodicon">&#xE737;</span></td>
+                                        <td><a href="about:start" id="gohome" style="margin: 0 7px 0 7px;"><id id="invalidcert_gohome">Zur Startseite wechseln</id></a></td>
+                                    </tr>
+                                </table>
+                                <div id="moreInfoDropdown">
+                                    <a href="javascript:expandCollapseDetails('infoBlockID');" id="moreInformationDropdownLink" role="button" style="text-decoration: none;">
+                                        <span id="moreInformationDropdownSpan"></span>
+                                    </a>
+                                </div>
+                                <div id="infoBlockID">
+                                    <p id="certReason"></p>
+                                    <p id="ErrorCode"></p>
+                                    <p id="override" class="warning"><a href="Titelnummer" id="overridelink"><id id="invalidcert_continue">Webseite trotzdem laden</id></a> <span class="warning-text"><id id="invalidcert_warning">(Nicht empfohlen)</id></span></p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

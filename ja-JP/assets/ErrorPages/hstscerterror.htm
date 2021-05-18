@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>証明書エラー: ナビゲーションはブロックされました</title>
+        <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+        <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+        <script language="javascript" type="text/javascript">
+            var L_CertUnknownCA_TEXT = "お使いの PC はこの Web サイトのセキュリティ証明書を信頼しません。";
+            var L_CertExpired_TEXT = "Web サイトのセキュリティ証明書はまだ有効になっていないか、有効期限が切れています。";
+            var L_CertCNMismatch_TEXT = "Web サイトのセキュリティ証明書のホスト名が、参照しようとしている Web サイトと異なります。";
+            var L_CertRevoked_TEXT = "この Web サイトのセキュリティ証明書は取り消されたため、現時点でそこに移動できません。";
+            var L_CertSigFailed_TEXT = "Web サイトのセキュリティ証明書は安全ではありません。";
+            var L_CertWeakSignature_TEXT = "Web サイトのセキュリティ証明書は低いセキュリティ強度で署名されており、安全ではありません。";
+
+            var L_ERROR_CODE_TEXT = "エラー コード: ";
+
+            var L_MOREINFO_TEXT = "詳細";
+
+            window.onload = function () {
+                getCertErrorInfo();
+                initMoreInfo('infoBlockID', L_MOREINFO_TEXT);
+                setGoHomeTarget();
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="Wrapper">
+            <div id="invalidcert">
+                <div class="msgBlock">
+                    <div class="msgBody">
+                        <table role="presentation">
+                            <tr>
+                                <td aria-hidden="true">
+                                    <span id="erroricon">&#xE7BA;</span>
+                                </td>
+                                <td>
+                                    <h2 class="red" id="invalidcert_header">このサイトは安全ではありません</h2>
+                                    <br />
+                                    <p id="invalidcert_body1">だれかがユーザーを騙そうとしているか、サーバーに送信されたデータを盗み取ろうとしている可能性があります。このサイトをすぐに閉じてください。</p>
+                                    <br />
+                                    <table role="presentation">
+                                        <tr>
+                                            <td aria-hidden="true"><span id="smallgoodicon">&#xE737;</span></td>
+                                            <td><a href="about:start" id="gohome" style="margin: 0 7px 0 7px;"><id id="invalidcert_gohome">スタート ページに移動</id></a></td>
+                                        </tr>
+                                    </table>
+                                    <div id="moreInfoDropdown">
+                                        <a href="javascript:expandCollapseDetails('infoBlockID');" id="moreInformationDropdownLink" role="button" style="text-decoration: none;">
+                                            <span id="moreInformationDropdownSpan"></span>
+                                        </a>
+                                    </div>
+                                    <div id="infoBlockID">
+                                        <p id="certReason"></p>
+                                        <p id="ErrorCode"></p>
+                                        <p id="hstsNoContinue">このサイトは、HTTP Strict Transport Security を使用しているため、現時点でこのサイトに移動できません。</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html> 

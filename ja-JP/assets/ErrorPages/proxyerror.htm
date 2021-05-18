@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>プロキシ サーバー エラー</title>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        "use strict";
+        window.onload = function () {
+            // The Settings app cannot be launched from the isolated container.
+            var buttonLaunchMSSettingsNetworkProxy = document.getElementById("LaunchMSSettingsNetworkProxy");
+            buttonLaunchMSSettingsNetworkProxy.style.display = isInApplicationGuard() ? "none" : null;
+        };
+    </script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="proxyerror">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="proxyerror_header">プロキシ サーバーに接続できません</h1>
+                        <p id="proxyerror_body">対処方法</p>
+                        <ul>
+                            <li><id id="proxyerror_firewall">ファイアウォールの設定によって Web アクセスがブロックされていないことを確かめる</id></li>
+                            <li><id id="proxyerror_administrator">システム管理者に問い合わせる</id></li>
+                        </ul>
+                        <br />
+                        <button class="pushbutton" id="LaunchMSSettingsNetworkProxy" type="submit" onclick="window.location='ms-settings:network-proxy'"><id id="proxyerror_proxysettings">プロキシ設定に移動する</id></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

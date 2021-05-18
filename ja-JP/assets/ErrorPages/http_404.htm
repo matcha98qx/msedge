@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>HTTP 404 エラー</title>
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="ErrorPageStyles.css">
+    <script src="ms-appx-web:///Assets/ErrorPages/ErrorPageScripts.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="Wrapper">
+        <div id="HTTP404">
+            <table>
+                <tr>
+                    <td>
+                        <span id="icon">&#xE946;</span>
+                    </td>
+                    <td>
+                        <h1 id="http404_header1">HTTP 404 エラー</h1>
+                        <h1 id="http404_header2">Microsoft Edge でこのページを表示できません</h1>
+                        <br />
+                        <p id="http404_body">対処方法</p>
+                        <ul>
+                            <li><id id="http404_retypeurl">Web アドレスの入力をやり直す</id></li>
+                            <li><a href="#" onclick="window.history.back(); return false;"><id id="http404_goback">直前のページに戻る</id></a></li>
+                            <li><a href="#" onclick="clickSendFeedback()" id="dnsSendFeedbackLink"><id id="dnserror_unavailable_sendfeedback">この問題を報告する</id></a></li>
+                        </ul>
+                        <br>
+                        <a href="#" onclick="clickPrivacyStatement()" id="http404_SendFeedbackLink"><id id="http404_error_privacystatement"><small>プライバシーに関する声明</small></id></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 
